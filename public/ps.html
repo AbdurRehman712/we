@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polling Stations</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .urdu {
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 px-7 py-7">
+    <h3 class="mb-5 text-2xl font-bold text-center text-blue-800">Polling Stations win2.0</h3>
+
+    <div dir="rtl" class="grid gap-3 md:table shadow-sm overflow-hidden rounded-lg md:[&>*]:table-row md:[&>*>div]:table-cell w-full [&>*>div]:p-3 md:border-collapse">
+        <header class="flex items-center md:table-row h-12 bg-gray-200 [&>*]:align-middle md:[&>*:not(:last-child)]:border-l md:[&>*]:border-gray-300">
+            <div class="text-xs font-bold text-center w-11">#</div>
+            <div class="text-xs font-bold urdu">پولنگ سٹیشن کا نام</div>
+            <div class="hidden text-center md:table-cell">UC</div>
+            <div class="hidden text-center md:table-cell">PA</div>
+            <div class="hidden text-center md:table-cell">NA</div>
+            <div class="hidden text-xs font-bold text-center md:table-cell urdu">بلاک کوڈ</div>
+            <div class="hidden text-xs font-bold text-center md:table-cell urdu">کل ووٹر</div>
+            <div class="hidden text-xs font-bold text-center md:table-cell urdu">ہدف</div>
+            <div class="hidden text-xs font-bold text-center md:table-cell urdu">نشان زد ووٹر</div>
+            <div class="hidden text-xs font-bold text-center md:table-cell urdu">طاقت ور ووٹر</div>
+            <div class="hidden md:table-cell"></div>
+        </header>
+        <div class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-3 bg-white md:[&>*:not(:last-child)]:border-l [&>*]:border-dashed [&>*]:border-gray-300 md:border-b md:border-dashed md:border-gray-300">
+            <div class="flex gap-1 items-center md:table-cell text-xs md:w-11 md:text-center col-span-3 after:content-[attr(data-pn)] md:after:hidden after:font-urdu" data-pn="پولنگ سٹیشن کا نام:">1</div>
+            <div class="urdu text-xs col-span-3 border-b border-gray-300 !border-solid md:!border-dashed">
+                <div class="flex items-center gap-2">
+                    <div>
+                        <img src="./images/male.png">
+                    </div>
+                    <div>
+                       گورنمنٹ گرلز پوسٹ گریجویٹ کالج ہری پور (مرد) 
+                    </div>
+                </div>
+            </div>
+            <div class="border-l border-gray-300 !border-solid md:!border-dashed flex flex-col justify-between gap-1 items-center md:table-cell text-center text-xs before:content-[attr(data-uc)] md:before:hidden" data-uc="UC">NHC-1</div>
+            <div class="border-l border-gray-300 !border-solid md:!border-dashed flex flex-col justify-between gap-1 items-center md:table-cell text-center text-xs before:content-[attr(data-pa)] md:before:hidden" data-pa="PA" >PK-40</div>
+            <div class="flex flex-col justify-between gap-1 items-center md:table-cell text-center text-xs before:content-[attr(data-na)] md:before:hidden" data-na="NA">NA-17</div>
+            <div class="border-t border-gray-300 !border-solid md:border-t-0 md:!border-dashed flex justify-between gap-1 items-center md:table-cell text-xs col-span-3 before:content-[attr(data-block)] md:before:hidden before:font-urdu" data-block="بلاک کوڈ:">026050101, 026050102, 026050103</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-tv)] md:before:hidden before:font-urdu" data-tv="کل ووٹر:">800</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-t)] md:before:hidden before:font-urdu" data-t="ہدف">450</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-pv)] md:before:hidden before:font-urdu" data-pv="نشان زد ووٹر:">450</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-sv)] md:before:hidden before:font-urdu" data-sv="طاقت ور ووٹر:">-</div>
+            <div class="col-span-3 border-t border-gray-300 !border-solid md:border-t-0">
+                <button type="button" class="inline-flex justify-center w-full gap-2 px-4 py-2 font-medium text-gray-700 bg-gray-100 rounded-md shadow-sm urdu text-2xs hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                    ڈاؤن لوڈ کریں
+                    <svg class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-3 bg-white md:[&>*:not(:last-child)]:border-l [&>*]:border-dashed [&>*]:border-gray-300 md:border-b md:border-dashed md:border-gray-300">
+            <div class="flex gap-1 items-center md:table-cell text-xs md:w-11 md:text-center col-span-3 after:content-[attr(data-pn)] md:after:hidden after:font-urdu" data-pn="پولنگ سٹیشن کا نام:">2</div>
+            <div class="urdu text-xs col-span-3 border-b border-gray-300 !border-solid md:!border-dashed">
+                <div class="flex items-center gap-2">
+                    <div>
+                        <img src="./images/female.png">
+                    </div>
+                    <div>
+                       گورنمنٹ گرلز پوسٹ گریجویٹ کالج ہری پور (عورت) 
+                    </div>
+                </div>
+            </div>
+            <div class="border-l border-gray-300 !border-solid md:!border-dashed flex flex-col justify-between gap-1 items-center md:table-cell text-center text-xs before:content-[attr(data-uc)] md:before:hidden" data-uc="UC">NHC-1</div>
+            <div class="border-l border-gray-300 !border-solid md:!border-dashed flex flex-col justify-between gap-1 items-center md:table-cell text-center text-xs before:content-[attr(data-pa)] md:before:hidden" data-pa="PA" >PK-40</div>
+            <div class="flex flex-col justify-between gap-1 items-center md:table-cell text-center text-xs before:content-[attr(data-na)] md:before:hidden" data-na="NA">NA-17</div>
+            <div class="border-t border-gray-300 !border-solid md:border-t-0 md:!border-dashed flex justify-between gap-1 items-center md:table-cell text-xs col-span-3 before:content-[attr(data-block)] md:before:hidden before:font-urdu" data-block="بلاک کوڈ:">026050101, 026050102, 026050103</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-tv)] md:before:hidden before:font-urdu" data-tv="کل ووٹر:">800</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-t)] md:before:hidden before:font-urdu" data-t="ہدف">450</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-pv)] md:before:hidden before:font-urdu" data-pv="نشان زد ووٹر:">450</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-sv)] md:before:hidden before:font-urdu" data-sv="طاقت ور ووٹر:">-</div>
+            <div class="col-span-3 border-t border-gray-300 !border-solid md:border-t-0">
+                <button type="button" class="inline-flex justify-center w-full gap-2 px-4 py-2 font-medium text-gray-700 bg-gray-100 rounded-md shadow-sm urdu text-2xs hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                    ڈاؤن لوڈ کریں
+                    <svg class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-3 bg-white md:[&>*:not(:last-child)]:border-l [&>*]:border-dashed [&>*]:border-gray-300 md:border-b md:border-dashed md:border-gray-300">
+            <div class="flex gap-1 items-center md:table-cell text-xs md:w-11 md:text-center col-span-3 after:content-[attr(data-pn)] md:after:hidden after:font-urdu" data-pn="پولنگ سٹیشن کا نام:">3</div>
+            <div class="urdu text-xs col-span-3 border-b border-gray-300 !border-solid md:!border-dashed">
+                <div class="flex items-center gap-2">
+                    <div>
+                        <img src="./images/transgender.png">
+                    </div>
+                    <div>
+                       گورنمنٹ گرلز پوسٹ گریجویٹ کالج ہری پور (مشترکہ) 
+                    </div>
+                </div>
+            </div>
+            <div class="border-l border-gray-300 !border-solid md:!border-dashed flex flex-col justify-between gap-1 items-center md:table-cell text-center text-xs before:content-[attr(data-uc)] md:before:hidden" data-uc="UC">NHC-1</div>
+            <div class="border-l border-gray-300 !border-solid md:!border-dashed flex flex-col justify-between gap-1 items-center md:table-cell text-center text-xs before:content-[attr(data-pa)] md:before:hidden" data-pa="PA" >PK-40</div>
+            <div class="flex flex-col justify-between gap-1 items-center md:table-cell text-center text-xs before:content-[attr(data-na)] md:before:hidden" data-na="NA">NA-17</div>
+            <div class="border-t border-gray-300 !border-solid md:border-t-0 md:!border-dashed flex justify-between gap-1 items-center md:table-cell text-xs col-span-3 before:content-[attr(data-block)] md:before:hidden before:font-urdu" data-block="بلاک کوڈ:">026050101, 026050102, 026050103</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-tv)] md:before:hidden before:font-urdu" data-tv="کل ووٹر:">800</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-t)] md:before:hidden before:font-urdu" data-t="ہدف">450</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-pv)] md:before:hidden before:font-urdu" data-pv="نشان زد ووٹر:">450</div>
+            <div class="border-t border-gray-300 border-dashed md:border-t-0 flex justify-between gap-1 items-center md:table-cell text-xs text-center col-span-3 before:content-[attr(data-sv)] md:before:hidden before:font-urdu" data-sv="طاقت ور ووٹر:">-</div>
+            <div class="col-span-3 border-t border-gray-300 !border-solid md:border-t-0">
+                <button type="button" class="inline-flex justify-center w-full gap-2 px-4 py-2 font-medium text-gray-700 bg-gray-100 rounded-md shadow-sm urdu text-2xs hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                    ڈاؤن لوڈ کریں
+                    <svg class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
