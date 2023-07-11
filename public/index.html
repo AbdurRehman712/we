@@ -27,12 +27,12 @@
     <title>Quick Start Tailwind VS Code by ARM</title>
 </head>
 
-<body>
-    <div class="antialiased bg-gray-50 dark:bg-gray-900" x-data="{ menu: (window.innerWidth < 768)? false : true}">
+<body class="bg-gray-200">
+    <div class="antialiased" x-data="{ menu: (window.innerWidth < 768)? false : true}">
 
 
         <!-- Sidebar -->
-        <aside :class="menu ? 'w-4/5 md:w-64 translate-x-0' : 'md:w-fit'" class="fixed top-0 left-0 z-[60] h-screen transition-transform -translate-x-full bg-blue-900 border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        <aside :class="menu ? 'w-4/5 md:w-64 translate-x-0' : 'md:w-fit'" class="fixed top-0 left-0 z-[60] h-screen transition-transform -translate-x-full bg-blue-900 border-r border-gray-300 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
             aria-label="Sidenav" id="drawer-navigation">
             <div class="h-full px-4 py-5 overflow-y-auto bg-blue-900 dark:bg-gray-800">
                 <div class="flex items-center justify-between mb-8">
@@ -62,7 +62,7 @@
                         </svg>                        
                     </a>
                     <button x-on:click="menu = false">
-                        <svg aria-hidden="true" class="text-white md:hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                        <svg aria-hidden="true" class="w-6 h-6 text-white md:hidden" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -118,7 +118,7 @@
                     </li>
                     <li>
                         <a href="#" class="flex items-center p-2 text-base font-normal text-blue-300 rounded-lg group hover:text-white">
-                            <svg aria-hidden="true" class="w-5 h-5 text-transparent stroke-blue-300 transition duration-75 group-hover:stroke-white" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg aria-hidden="true" class="w-5 h-5 text-transparent transition duration-75 stroke-blue-300 group-hover:stroke-white" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.1269 4.83063V2.996C12.1269 1.98277 11.3055 1.16138 10.2923 1.16138H2.95377C1.94053 1.16138 1.11914 1.98277 1.11914 2.996V10.3345C1.11914 11.3477 1.94053 12.1691 2.95377 12.1691H4.78839" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                                 <rect x="4.78906" y="4.83057" width="11.0078" height="11.0078" rx="2" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>                                                                             
@@ -129,21 +129,21 @@
                 <div class="mb-3 text-sm font-bold text-slate-500" :class="menu ? 'block' : 'md:hidden'">Custom</div>
                 <ul class="flex flex-col gap-3">
                     <li>
-                        <a href="#" class="flex items-center p-2 text-base font-normal justify-between text-blue-300 rounded-lg group hover:text-white">
+                        <a href="#" class="flex items-center justify-between p-2 text-base font-normal text-blue-300 rounded-lg group hover:text-white">
                             <span class="flex items-center">
-                                <svg aria-hidden="true" class="w-5 h-5 text-transparent stroke-blue-300 transition duration-75 group-hover:stroke-white" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <svg aria-hidden="true" class="w-5 h-5 text-transparent transition duration-75 stroke-blue-300 group-hover:stroke-white" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.3008 13.0787V14.8432C13.3008 15.8177 12.5108 16.6077 11.5363 16.6077H2.71373C1.73922 16.6077 0.949219 15.8177 0.949219 14.8432V6.90293C0.949219 5.92842 1.73922 5.13843 2.71373 5.13843H4.47823" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M6.24302 1.60938H8.88978L10.6543 3.37388H15.0656C16.0401 3.37388 16.8301 4.16388 16.8301 5.13839V11.3142C16.8301 12.2887 16.0401 13.0787 15.0656 13.0787H6.24302C5.26851 13.0787 4.47852 12.2887 4.47852 11.3142V3.37388C4.47852 2.39937 5.26851 1.60938 6.24302 1.60938" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>                                                      
                                 <span class="ml-3" :class="menu ? 'block' : 'md:hidden'">Electoral Units</span>
                             </span>
-                            <svg :class="menu ? 'block' : 'md:hidden'" class="stroke-blue-300 transition text-transparent duration-75 group-hover:stroke-white" width="5" height="10" viewBox="0 0 5 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg :class="menu ? 'block' : 'md:hidden'" class="text-transparent transition duration-75 stroke-blue-300 group-hover:stroke-white" width="5" height="10" viewBox="0 0 5 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.42383 1.6084L4.92383 5.1084L1.42383 8.6084" stroke-width="1.8" stroke-linecap="square"/>
                             </svg>                                
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 text-base font-normal justify-between text-blue-300 rounded-lg group hover:text-white">
+                        <a href="#" class="flex items-center justify-between p-2 text-base font-normal text-blue-300 rounded-lg group hover:text-white">
                             <span class="flex items-center"> 
                                 <svg aria-hidden="true" class="w-5 h-5 text-blue-300 transition duration-75 group-hover:text-white" viewBox="0 0 23 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0266 8.62664C13.1396 8.62664 14.8497 6.91649 14.8497 4.80355C14.8497 2.69062 13.1396 0.980469 11.0266 0.980469C8.91368 0.980469 7.20353 2.69062 7.20353 4.80355C7.20353 6.91649 8.91368 8.62664 11.0266 8.62664ZM21.4036 4.80355C21.4036 6.31231 20.1815 7.53433 18.6728 7.53433C17.164 7.53433 15.942 6.31231 15.942 4.80355C15.942 3.2948 17.164 2.07278 18.6728 2.07278C20.1815 2.07278 21.4036 3.2948 21.4036 4.80355ZM20.3112 4.80355C20.3112 3.89898 19.5774 3.16509 18.6728 3.16509C17.7682 3.16509 17.0343 3.89898 17.0343 4.80355C17.0343 5.70812 17.7682 6.44202 18.6728 6.44202C19.5774 6.44202 20.3112 5.70812 20.3112 4.80355ZM13.7574 4.80355C13.7574 3.29821 12.532 2.07278 11.0266 2.07278C9.52127 2.07278 8.29584 3.29821 8.29584 4.80355C8.29584 6.30889 9.52127 7.53433 11.0266 7.53433C12.532 7.53433 13.7574 6.30889 13.7574 4.80355ZM17.9901 8.62664C17.4712 8.62664 16.9899 8.79048 16.5872 9.06697C16.908 9.28544 17.1982 9.54145 17.4542 9.83159C17.6214 9.75991 17.8023 9.71895 17.9901 9.71895H19.3555C20.1815 9.71895 20.8574 10.4528 20.8574 11.3574C20.8574 11.6578 21.1032 11.9036 21.4036 11.9036C21.7039 11.9036 21.9497 11.6578 21.9497 11.3574C21.9497 9.85207 20.7857 8.62664 19.3555 8.62664H17.9901ZM6.11122 4.80355C6.11122 6.31231 4.8892 7.53433 3.38045 7.53433C1.87169 7.53433 0.649671 6.31231 0.649671 4.80355C0.649671 3.2948 1.87169 2.07278 3.38045 2.07278C4.8892 2.07278 6.11122 3.2948 6.11122 4.80355ZM3.38045 3.16509C4.28501 3.16509 5.01891 3.89898 5.01891 4.80355C5.01891 5.70812 4.28501 6.44202 3.38045 6.44202C2.47588 6.44202 1.74198 5.70812 1.74198 4.80355C1.74198 3.89898 2.47588 3.16509 3.38045 3.16509ZM12.4971 9.50343C12.86 9.40472 13.2106 9.30933 13.7608 9.30933C14.9999 9.30933 16.2048 9.86231 16.9114 10.9102C17.3347 11.5383 17.5805 12.2927 17.5805 13.1051V14.6343C17.5805 15.5389 16.8466 16.2728 15.942 16.2728H6.11122C5.20665 16.2728 4.47275 15.5389 4.47275 14.6343V13.1051C4.47275 12.2927 4.71852 11.5383 5.14179 10.9102C5.84838 9.86231 7.05334 9.30933 8.29243 9.30933C8.8426 9.30933 9.19326 9.40472 9.55614 9.50343C9.94523 9.60928 10.3484 9.71895 11.0266 9.71895C11.7048 9.71895 12.108 9.60928 12.4971 9.50343ZM16.4882 14.6343C16.4882 14.9347 16.2424 15.1805 15.942 15.1805H6.11122C5.81083 15.1805 5.56506 14.9347 5.56506 14.6343V13.1051C5.56506 12.5385 5.73232 11.9889 6.04636 11.5213C6.51742 10.8215 7.35714 10.4016 8.28901 10.4016C8.70419 10.4016 9.00099 10.4824 9.33109 10.5721C9.74461 10.6846 10.2104 10.8113 11.0266 10.8113C11.8435 10.8113 12.3094 10.6844 12.7226 10.5719C13.0518 10.4822 13.3476 10.4016 13.7608 10.4016C14.6927 10.4016 15.5324 10.8215 16.0035 11.5213C16.3175 11.9889 16.4847 12.5385 16.4847 13.1051V14.6343H16.4882ZM4.06314 8.62664C4.57857 8.62664 5.05987 8.79048 5.46607 9.06697C5.14862 9.28544 4.85506 9.54145 4.59905 9.83159C4.43179 9.75991 4.25088 9.71895 4.06314 9.71895H2.69775C1.87169 9.71895 1.19583 10.4528 1.19583 11.3574C1.19583 11.6578 0.950056 11.9036 0.649671 11.9036C0.349285 11.9036 0.103516 11.6578 0.103516 11.3574C0.103516 9.85207 1.26751 8.62664 2.69775 8.62664H4.06314Z"/>
@@ -151,15 +151,15 @@
                                 </svg>                                                                                        
                                 <span class="ml-3" :class="menu ? 'block' : 'md:hidden'">Teams</span>
                             </span>
-                            <svg :class="menu ? 'block' : 'md:hidden'" class="stroke-blue-300 transition text-transparent duration-75 group-hover:stroke-white" width="5" height="10" viewBox="0 0 5 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg :class="menu ? 'block' : 'md:hidden'" class="text-transparent transition duration-75 stroke-blue-300 group-hover:stroke-white" width="5" height="10" viewBox="0 0 5 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.42383 1.6084L4.92383 5.1084L1.42383 8.6084" stroke-width="1.8" stroke-linecap="square"/>
                             </svg>                                
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 text-base font-normal justify-between text-blue-300 rounded-lg group hover:text-white">
+                        <a href="#" class="flex items-center justify-between p-2 text-base font-normal text-blue-300 rounded-lg group hover:text-white">
                             <span class="flex items-center"> 
-                                <svg aria-hidden="true" class="w-5 h-5 text-transparent stroke-blue-300 transition duration-75 group-hover:stroke-white" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <svg aria-hidden="true" class="w-5 h-5 text-transparent transition duration-75 stroke-blue-300 group-hover:stroke-white" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2.98855 12.3397L1.63783 10.989C1.08687 10.4381 1.08687 9.53165 1.63783 8.98069L2.98855 7.62996C3.2196 7.39892 3.40621 6.94571 3.40621 6.62581V4.71524C3.40621 3.93324 4.04603 3.29342 4.82803 3.29342H6.7386C7.05851 3.29342 7.51171 3.10681 7.74276 2.87576L9.09348 1.52503C9.64444 0.974078 10.5508 0.974078 11.1018 1.52503L12.4525 2.87576C12.6836 3.10681 13.1368 3.29342 13.4567 3.29342H15.3673C16.1493 3.29342 16.7891 3.93324 16.7891 4.71524V6.62581C16.7891 6.94571 16.9757 7.39892 17.2067 7.62996L18.5575 8.98069C19.1084 9.53165 19.1084 10.4381 18.5575 10.989L17.2067 12.3397C16.9757 12.5708 16.7891 13.024 16.7891 13.3439V15.2545C16.7891 16.0365 16.1493 16.6763 15.3673 16.6763H13.4567C13.1368 16.6763 12.6836 16.8629 12.4525 17.0939L11.1018 18.4447C10.5508 18.9956 9.64444 18.9956 9.09348 18.4447L7.74276 17.0939C7.51171 16.8629 7.05851 16.6763 6.7386 16.6763H4.82803C4.04603 16.6763 3.40621 16.0365 3.40621 15.2545V13.3439C3.40621 13.0151 3.2196 12.5619 2.98855 12.3397Z" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.44141 12.6419L12.7732 7.31006L7.44141 12.6419Z"/>
                                     <path d="M7.44141 12.6419L12.7732 7.31006" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -173,9 +173,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 text-base font-normal justify-between text-blue-300 rounded-lg group hover:text-white">
+                        <a href="#" class="flex items-center justify-between p-2 text-base font-normal text-blue-300 rounded-lg group hover:text-white">
                             <span class="flex items-center">       
-                                <svg aria-hidden="true" class="w-5 h-5 text-transparent stroke-blue-300 transition duration-75 group-hover:stroke-white" viewBox="0 0 16 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <svg aria-hidden="true" class="w-5 h-5 text-transparent transition duration-75 stroke-blue-300 group-hover:stroke-white" viewBox="0 0 16 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7293 5.02968V13.4079C14.7293 16.7592 13.8915 17.597 10.5402 17.597H5.51332C2.16204 17.597 1.32422 16.7592 1.32422 13.4079V5.02968C1.32422 1.6784 2.16204 0.840576 5.51332 0.840576H10.5402C13.8915 0.840576 14.7293 1.6784 14.7293 5.02968Z" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M9.70284 3.77291H6.35156" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.02714 15.1673C8.74435 15.1673 9.32576 14.5859 9.32576 13.8687C9.32576 13.1515 8.74435 12.5701 8.02714 12.5701C7.30993 12.5701 6.72852 13.1515 6.72852 13.8687C6.72852 14.5859 7.30993 15.1673 8.02714 15.1673V15.1673Z" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -185,7 +185,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 text-base font-normal justify-between text-blue-300 rounded-lg group hover:text-white">
+                        <a href="#" class="flex items-center justify-between p-2 text-base font-normal text-blue-300 rounded-lg group hover:text-white">
                             <span class="flex items-center">   
                                 <svg aria-hidden="true" class="w-5 h-5 text-blue-300 transition duration-75 group-hover:text-white" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8976 5.23287V6.1618C12.8365 6.16106 12.7747 6.16069 12.712 6.16069H5.28945C5.22676 6.16069 5.16491 6.16106 5.10388 6.1618V5.23287C5.10388 2.89477 5.76449 1.33604 9.00072 1.33604C12.2369 1.33604 12.8976 2.89477 12.8976 5.23287ZM3.9905 5.23287V6.22913C1.74538 6.50203 1.02148 7.6361 1.02148 10.4287V11.9132C1.02148 15.1865 2.01611 16.1811 5.28945 16.1811H12.712C15.9853 16.1811 16.98 15.1865 16.98 11.9132V10.4287C16.98 7.6361 16.2561 6.50203 14.0109 6.22913V5.23287C14.0109 3.08034 13.4914 0.222656 9.00072 0.222656C4.51008 0.222656 3.9905 3.08034 3.9905 5.23287ZM2.13487 10.4287C2.13487 7.77881 2.63218 7.27407 5.28945 7.27407H12.712C15.3693 7.27407 15.8666 7.77881 15.8666 10.4287V11.9132C15.8666 14.563 15.3693 15.0677 12.712 15.0677H5.28945C2.63218 15.0677 2.13487 14.563 2.13487 11.9132V10.4287ZM5.74965 11.8538C5.83872 11.8909 5.93521 11.9132 6.0317 11.9132C6.22469 11.9132 6.41767 11.8315 6.5587 11.6979C6.69231 11.5569 6.77396 11.3639 6.77396 11.1709C6.77396 11.0744 6.75169 10.9779 6.71458 10.8889C6.67746 10.7998 6.62551 10.7181 6.5587 10.6439C6.35087 10.4361 6.01686 10.3693 5.74965 10.488C5.65315 10.5251 5.57893 10.5771 5.5047 10.6439C5.4379 10.7181 5.38594 10.7924 5.34883 10.8889C5.31172 10.9779 5.28945 11.0744 5.28945 11.1709C5.28945 11.3713 5.3711 11.5569 5.5047 11.6979C5.57893 11.7647 5.65315 11.8167 5.74965 11.8538ZM9.00072 11.9132C8.80773 11.9132 8.61475 11.8315 8.47372 11.6979C8.34011 11.5569 8.25847 11.3713 8.25847 11.1709C8.25847 11.0744 8.27331 10.9779 8.31785 10.8889C8.35496 10.7998 8.40692 10.7181 8.47372 10.6439C8.64444 10.4732 8.90423 10.3915 9.14175 10.4435C9.19371 10.4509 9.23824 10.4658 9.28278 10.488C9.32731 10.5029 9.37185 10.5251 9.41638 10.5548C9.44112 10.5697 9.46586 10.5911 9.4906 10.6126C9.50298 10.6233 9.51535 10.634 9.52772 10.6439C9.59452 10.7181 9.64648 10.7998 9.68359 10.8889C9.72071 10.9779 9.74297 11.0744 9.74297 11.1709C9.74297 11.3713 9.66133 11.5569 9.52772 11.6979L9.41638 11.787C9.37185 11.8167 9.32731 11.8389 9.28278 11.8538C9.23824 11.8761 9.19371 11.8909 9.14175 11.8983C9.09721 11.9057 9.04525 11.9132 9.00072 11.9132ZM11.4427 11.6979C11.5838 11.8315 11.7693 11.9132 11.9697 11.9132C12.1627 11.9132 12.3557 11.8315 12.4967 11.6979C12.5635 11.6237 12.6155 11.5495 12.6526 11.453C12.6897 11.3639 12.712 11.2674 12.712 11.1709C12.712 10.9705 12.6303 10.7849 12.4967 10.6439C12.3186 10.4732 12.0662 10.3915 11.8213 10.4435C11.7768 10.4509 11.7322 10.4658 11.6877 10.488C11.6431 10.5029 11.5986 10.5251 11.5541 10.5548L11.4427 10.6439C11.3091 10.7849 11.2275 10.9779 11.2275 11.1709C11.2286 11.2679 11.2487 11.3638 11.2869 11.453C11.324 11.542 11.3759 11.6237 11.4427 11.6979Z" />
@@ -196,9 +196,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 text-base font-normal justify-between text-blue-300 rounded-lg group hover:text-white">
+                        <a href="#" class="flex items-center justify-between p-2 text-base font-normal text-blue-300 rounded-lg group hover:text-white">
                             <span class="flex items-center">  
-                                <svg aria-hidden="true" class="w-5 h-5 text-transparent stroke-blue-300 transition duration-75 group-hover:stroke-white" viewBox="0 0 16 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <svg aria-hidden="true" class="w-5 h-5 text-transparent transition duration-75 stroke-blue-300 group-hover:stroke-white" viewBox="0 0 16 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.27201 3.24316H3.45339C2.44899 3.24316 1.63477 4.05739 1.63477 5.06179V15.9735C1.63477 16.9779 2.44899 17.7921 3.45339 17.7921H12.5465C13.5509 17.7921 14.3651 16.9779 14.3651 15.9735V5.06179C14.3651 4.05739 13.5509 3.24316 12.5465 3.24316H10.7279" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                                     <rect x="5.27148" y="1.42456" width="5.45587" height="3.63724" rx="1.81862" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.27106 14.155V9.6084V14.155Z" fill="#E5E7E9"/>
@@ -210,7 +210,7 @@
                                 </svg>                                                                                 
                                 <span class="ml-3" :class="menu ? 'block' : 'md:hidden'">Reports</span>
                             </span>
-                            <svg :class="menu ? 'block' : 'md:hidden'" class="stroke-blue-300 transition text-transparent duration-75 group-hover:stroke-white" width="5" height="10" viewBox="0 0 5 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg :class="menu ? 'block' : 'md:hidden'" class="text-transparent transition duration-75 stroke-blue-300 group-hover:stroke-white" width="5" height="10" viewBox="0 0 5 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.42383 1.6084L4.92383 5.1084L1.42383 8.6084" stroke-width="1.8" stroke-linecap="square"/>
                             </svg>                                
                         </a>
@@ -220,7 +220,7 @@
         </aside>
 
         <div class="" :class="menu ? 'md:ml-64' : 'md:ml-20'">
-            <nav class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 sticky left-0 right-0 top-0 z-50">
+            <nav class="bg-white border-b border-gray-300 px-4 h-16 py-2.5 dark:bg-gray-800 dark:border-gray-700 sticky left-0 right-0 top-0 z-50">
                 <div class="flex flex-wrap items-center justify-between">
                     <div class="flex items-center justify-start gap-2">
                         <button x-on:click="menu = !menu"
@@ -271,7 +271,7 @@
                             <option value="NA-14">NA-17 C</option>
                           </select>
                         <button type="button" data-drawer-toggle="drawer-navigation" aria-controls="drawer-navigation"
-                            class="p-2 shrink-0 text-gray-500 rounded-lg md:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            class="p-2 text-gray-500 rounded-lg shrink-0 md:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
                             <span class="sr-only">Toggle search</span>
                             <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -280,21 +280,21 @@
                                 </path>
                             </svg>
                         </button>
-                        <button class="p-2 shrink-0 text-gray-600 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                        <button class="p-2 text-gray-600 rounded-lg cursor-pointer shrink-0 hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                             <span class="sr-only">Refresh</span>
                             <svg aria-expanded="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.323 8.74997C17.323 8.36337 17.0096 8.04997 16.623 8.04997C16.2364 8.04997 15.923 8.36337 15.923 8.74997H17.323ZM2.94533 11.7427C2.74494 11.4121 2.31448 11.3065 1.98387 11.5069C1.65326 11.7073 1.54769 12.1378 1.74808 12.4684L2.94533 11.7427ZM2.3467 11.4055C1.96011 11.4055 1.6467 11.7189 1.6467 12.1055C1.6467 12.4921 1.96011 12.8055 2.3467 12.8055V11.4055ZM5.76274 12.8055C6.14933 12.8055 6.46274 12.4921 6.46274 12.1055C6.46274 11.7189 6.14933 11.4055 5.76274 11.4055V12.8055ZM3.0467 12.1055C3.0467 11.7189 2.7333 11.4055 2.3467 11.4055C1.96011 11.4055 1.6467 11.7189 1.6467 12.1055H3.0467ZM1.6467 15.8843C1.6467 16.2709 1.96011 16.5843 2.3467 16.5843C2.7333 16.5843 3.0467 16.2709 3.0467 15.8843H1.6467ZM0.807813 8.74997C0.807813 9.13657 1.12121 9.44997 1.50781 9.44997C1.89441 9.44997 2.20781 9.13657 2.20781 8.74997H0.807813ZM16.0225 5.75407C16.2211 6.08574 16.651 6.19357 16.9827 5.99493C17.3143 5.79629 17.4222 5.3664 17.2235 5.03473L16.0225 5.75407ZM15.923 5.3944C15.923 5.781 16.2364 6.0944 16.623 6.0944C17.0096 6.0944 17.323 5.781 17.323 5.3944H15.923ZM17.323 1.61561C17.323 1.22901 17.0096 0.915608 16.623 0.915608C16.2364 0.915608 15.923 1.22901 15.923 1.61561H17.323ZM16.623 6.0944C17.0096 6.0944 17.323 5.781 17.323 5.3944C17.323 5.0078 17.0096 4.6944 16.623 4.6944V6.0944ZM13.2674 4.6944C12.8808 4.6944 12.5674 5.0078 12.5674 5.3944C12.5674 5.781 12.8808 6.0944 13.2674 6.0944V4.6944ZM15.923 8.74997C15.923 12.5352 12.8506 15.6076 9.0654 15.6076V17.0076C13.6238 17.0076 17.323 13.3084 17.323 8.74997H15.923ZM9.0654 15.6076C7.2226 15.6076 5.70398 14.6786 4.61191 13.6881C4.07036 13.1969 3.64923 12.7041 3.36405 12.3345C3.22185 12.1502 3.11452 11.9979 3.04394 11.8937C3.00867 11.8416 2.98266 11.8016 2.96613 11.7757C2.95787 11.7628 2.95198 11.7534 2.9485 11.7478C2.94676 11.745 2.94563 11.7432 2.9451 11.7423C2.94483 11.7419 2.94472 11.7417 2.94476 11.7418C2.94478 11.7418 2.94483 11.7419 2.94493 11.742C2.94498 11.7421 2.94508 11.7423 2.9451 11.7423C2.94521 11.7425 2.94533 11.7427 2.3467 12.1055C1.74808 12.4684 1.74822 12.4686 1.74837 12.4689C1.74843 12.469 1.74859 12.4692 1.74871 12.4694C1.74896 12.4698 1.74926 12.4703 1.74958 12.4708C1.75024 12.4719 1.75106 12.4733 1.75204 12.4749C1.75399 12.478 1.75657 12.4822 1.75977 12.4874C1.76619 12.4977 1.77511 12.5119 1.78652 12.5297C1.80934 12.5654 1.84212 12.6157 1.88464 12.6785C1.96964 12.8041 2.09388 12.9801 2.25564 13.1897C2.57837 13.608 3.0547 14.1657 3.67135 14.725C4.89569 15.8355 6.73641 17.0076 9.0654 17.0076V15.6076ZM2.3467 12.8055H5.76274V11.4055H2.3467V12.8055ZM1.6467 12.1055V15.8843H3.0467V12.1055H1.6467ZM2.20781 8.74997C2.20781 4.96296 5.25181 1.89238 9.0654 1.89238V0.492383C4.47496 0.492383 0.807813 4.19341 0.807813 8.74997H2.20781ZM9.0654 1.89238C11.378 1.89238 13.1142 2.85328 14.2861 3.83092C14.8725 4.32009 15.3123 4.80954 15.6041 5.17474C15.7497 5.35697 15.8575 5.50713 15.9274 5.60928C15.9623 5.66032 15.9878 5.69926 16.0036 5.72409C16.0115 5.7365 16.0171 5.74538 16.0202 5.75046C16.0218 5.753 16.0228 5.7546 16.0231 5.75521C16.0233 5.75552 16.0234 5.75558 16.0233 5.75539C16.0232 5.75529 16.0231 5.75514 16.023 5.75492C16.0229 5.75481 16.0228 5.7546 16.0227 5.75454C16.0226 5.75432 16.0225 5.75407 16.623 5.3944C17.2235 5.03473 17.2234 5.03446 17.2232 5.03417C17.2231 5.03405 17.2229 5.03374 17.2228 5.0335C17.2225 5.03303 17.2222 5.03249 17.2218 5.03189C17.2211 5.03068 17.2202 5.02922 17.2192 5.0275C17.2171 5.02408 17.2144 5.01964 17.211 5.01424C17.2043 5.00342 17.1951 4.9887 17.1834 4.97033C17.1599 4.93361 17.1263 4.88227 17.0826 4.81841C16.9952 4.69076 16.867 4.51265 16.6979 4.30093C16.3603 3.87826 15.8558 3.3172 15.1829 2.75587C13.8363 1.63249 11.7937 0.492383 9.0654 0.492383V1.89238ZM17.323 5.3944V1.61561H15.923V5.3944H17.323ZM16.623 4.6944H13.2674V6.0944H16.623V4.6944Z" fill="#455569"/>
                             </svg>     
                         </button>
-                        <div class="shrink-0 ml-2 md:ml-0" x-menu>
+                        <div class="ml-2 shrink-0 md:ml-0" x-menu>
                             <button type="button"
-                                class="flex text-sm  items-center gap-1 rounded-full"
+                                class="flex items-center gap-1 text-sm rounded-full"
                                 id="user-menu-button" x-menu:button>
-                                    <img class="w-8 h-8 shrink-0 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png" alt="user photo" />
-                                    <span class="text-slate-500 text-xs font-normal hidden md:block">omar@na17</span>
+                                    <img class="w-8 h-8 rounded-full shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png" alt="user photo" />
+                                    <span class="hidden text-xs font-normal text-slate-500 md:block">omar@na17</span>
                             </button>
                             <!-- Dropdown menu -->
-                            <div x-menu:items class="z-50 w-56 my-4 absolute right-0 text-base list-none bg-white divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
+                            <div x-menu:items class="absolute right-0 z-50 w-56 my-4 text-base list-none bg-white divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
                                 id="dropdown">
                                 <div class="px-4 py-3">
                                     <span class="block text-sm font-semibold text-gray-900 dark:text-white">omar@na17</span>
@@ -326,37 +326,363 @@
                     </div>
                 </div>
             </nav>
-            <main class="h-auto p-4">
-                <div class="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="h-32 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-64">
+            <div class="sticky left-0 z-50 p-4 bg-white shadow top-16">
+                <h1 class="text-xs font-semibold uppercase text-zinc-700">Voter Dashboard</h1>
+            </div>
+            <main class="h-full p-4">
+                <div class="flex flex-col gap-4">
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+                        <div class="bg-white rounded drop-shadow-sm">
+                            <div class="flex flex-col items-center">
+                                <h2 class="w-full px-4 py-3 text-sm font-semibold text-gray-600 border-b border-gray-300">Votes</h2>
+                                <div class="flex justify-between w-full gap-3 px-4 py-3">
+                                    <div>
+                                        <h3 class="text-base font-medium text-gray-900">880,000</h3>
+                                        <p class="mb-3 text-xs font-normal text-gray-600">Total Votes</p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-medium text-gray-900">440,000</h3>
+                                        <p class="mb-3 text-xs font-normal text-gray-600">Winning Target</p>
+                                        <span class="flex px-2 py-1 bg-violet-100 rounded-xl w-11">
+                                            <span class="text-violet-600 text-2xs font-medium flex items-center gap-0.5">
+                                                <span>50%</span>
+                                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.50817 1L1 5.50817" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M1.45068 1H5.50804V5.05735" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>                                        
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-medium text-gray-900">153,591</h3>
+                                        <p class="mb-3 text-xs font-normal text-gray-600">Marked Votes</p>
+                                        <span class="flex px-2 py-1 bg-gray-100 rounded-xl w-11">
+                                            <span class="text-green-600 text-2xs font-medium flex items-center gap-0.5">
+                                                <span>8.2%</span>
+                                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.50817 1L1 5.50817" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M1.45068 1H5.50804V5.05735" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>                                        
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded drop-shadow-sm">
+                            <div class="flex flex-col items-center">
+                                <h2 class="w-full px-4 py-3 text-sm font-semibold text-gray-600 border-b border-gray-300">Male Votes</h2>
+                                <div class="flex justify-between w-full gap-3 px-4 py-3">
+                                    <div>
+                                        <h3 class="text-base font-medium text-gray-900">393,901</h3>
+                                        <p class="mb-3 text-xs font-normal text-gray-600">Total Votes</p>
+                                        <span class="flex px-2 py-1 bg-gray-100 rounded-xl w-11">
+                                            <span class="text-green-600 text-2xs font-medium flex items-center gap-0.5">
+                                                <span>8.2%</span>
+                                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.50817 1L1 5.50817" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M1.45068 1H5.50804V5.05735" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>                                        
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-medium text-gray-900">79,290</h3>
+                                        <p class="mb-3 text-xs font-normal text-gray-600">Winning Target</p>
+                                        <span class="flex px-2 py-1 bg-violet-100 rounded-xl w-11">
+                                            <span class="text-violet-600 text-2xs font-medium flex items-center gap-0.5">
+                                                <span>50%</span>
+                                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.50817 1L1 5.50817" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M1.45068 1H5.50804V5.05735" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>                                        
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-medium text-gray-900">37,045</h3>
+                                        <p class="mb-3 text-xs font-normal text-gray-600">Marked Votes</p>
+                                        <span class="flex px-2 py-1 bg-gray-100 rounded-xl w-11">
+                                            <span class="text-green-600 text-2xs font-medium flex items-center gap-0.5">
+                                                <span>8.2%</span>
+                                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.50817 1L1 5.50817" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M1.45068 1H5.50804V5.05735" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>                                        
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded drop-shadow-sm">
+                            <div class="flex flex-col items-center">
+                                <h2 class="w-full px-4 py-3 text-sm font-semibold text-gray-600 border-b border-gray-300">Votes</h2>
+                                <div class="flex justify-between w-full gap-3 px-4 py-3">
+                                    <div>
+                                        <h3 class="text-base font-medium text-gray-900">880,000</h3>
+                                        <p class="mb-3 text-xs font-normal text-gray-600">Total Votes</p>
+                                        <span class="flex px-2 py-1 bg-gray-100 rounded-xl w-11">
+                                            <span class="text-green-600 text-2xs font-medium flex items-center gap-0.5">
+                                                <span>8.2%</span>
+                                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.50817 1L1 5.50817" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M1.45068 1H5.50804V5.05735" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>                                        
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-medium text-gray-900">440,000</h3>
+                                        <p class="mb-3 text-xs font-normal text-gray-600">Winning Target</p>
+                                        <span class="flex px-2 py-1 bg-violet-100 rounded-xl w-11">
+                                            <span class="text-violet-600 text-2xs font-medium flex items-center gap-0.5">
+                                                <span>50%</span>
+                                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.50817 1L1 5.50817" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M1.45068 1H5.50804V5.05735" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>                                        
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-medium text-gray-900">153,591</h3>
+                                        <p class="mb-3 text-xs font-normal text-gray-600">Marked Votes</p>
+                                        <span class="flex px-2 py-1 bg-gray-100 rounded-xl w-11">
+                                            <span class="text-green-600 text-2xs font-medium flex items-center gap-0.5">
+                                                <span>8.2%</span>
+                                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.50817 1L1 5.50817" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M1.45068 1H5.50804V5.05735" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>                                        
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="h-32 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-64">
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex p-4 bg-white rounded drop-shadow-sm">
+                                <div class="flex flex-col gap-3 grow">
+                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Total Votes</h3>
+                                    <h4 class="mb-0 text-xl font-medium text-gray-900">880K</h4>
+                                </div>
+                                <div class="flex items-start shrink-0">
+                                    <svg width="52" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.127521" cx="26.4961" cy="26" r="26" fill="#469DD2"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M37.0934 27.5139H40.1211C40.9585 27.5139 41.635 28.1904 41.635 29.0278V35.0833C41.635 35.9206 40.9585 36.5972 40.1211 36.5972H12.8713C12.0339 36.5972 11.3574 35.9206 11.3574 35.0833V29.0278C11.3574 28.1904 12.0339 27.5139 12.8713 27.5139H15.8991V16.8457C15.8991 16.051 16.5756 15.4028 17.4129 15.4028H35.5795C36.4169 15.4028 37.0934 16.051 37.0934 16.8457V27.5139ZM30.4512 20.3371C30.5506 20.3371 30.6452 20.3703 30.7209 20.4459L31.2602 20.9758C31.4069 21.1225 31.4069 21.3637 31.2602 21.5104L25.3703 27.4003C25.2946 27.4713 25.2 27.5091 25.1006 27.5091C25.0013 27.5091 24.9066 27.476 24.831 27.4003L21.7322 24.3016C21.5856 24.155 21.5856 23.9137 21.7322 23.767L22.2668 23.2324C22.3425 23.1615 22.4419 23.1236 22.5365 23.1236C22.6358 23.1236 22.7304 23.1567 22.8061 23.2324L25.1006 25.5316L30.1816 20.4459C30.2573 20.375 30.3566 20.3371 30.4512 20.3371ZM17.4129 16.9167H35.5795V31.2986H17.4129V16.9167ZM12.8713 35.0833H40.1211V29.0278H37.0934V31.2986H38.1531C38.4038 31.2986 38.6073 31.4689 38.6073 31.677V32.434C38.6073 32.6421 38.4038 32.8125 38.1531 32.8125H14.8393C14.5886 32.8125 14.3852 32.6421 14.3852 32.434V31.677C14.3852 31.4689 14.5886 31.2986 14.8393 31.2986H15.8991V29.0278H12.8713V35.0833Z" fill="#3292CD"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                            <div class="flex p-4 bg-white rounded drop-shadow-sm">
+                                <div class="flex flex-col gap-3 grow">
+                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Expected Turnout</h3>
+                                    <h4 class="mb-0 text-xl font-medium text-gray-900">352K</h4>
+                                    <span class="flex px-2 py-1 bg-violet-100 rounded-xl w-11">
+                                        <span class="text-violet-600 text-2xs font-medium flex items-center gap-0.5">
+                                            <span>50%</span>
+                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.50817 1L1 5.50817" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M1.45068 1H5.50804V5.05735" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>                                        
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="flex items-start shrink-0">
+                                    <svg width="52" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.127521" cx="26.9922" cy="26" r="26" fill="#469DD2"/>
+                                        <path d="M15.4316 29.8562H22.1078V36.0205H15.4316V29.8562Z" stroke="#3292CD"/>
+                                        <path d="M31.875 21.1204H38.5511V36.0205H31.875V21.1204Z" stroke="#3292CD"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9434 28.8243H21.596C21.8786 28.8243 22.1078 28.5952 22.1078 28.3125V28.0441C22.1078 26.7492 21.3636 25.6256 20.2809 25.0762C20.6173 24.7104 20.8231 24.2227 20.8231 23.6877C20.8231 22.5554 19.9019 21.6343 18.7697 21.6343C17.6375 21.6343 16.7163 22.5554 16.7163 23.6877C16.7163 24.2227 16.9222 24.7103 17.2585 25.0762C16.1758 25.6256 15.4316 26.7492 15.4316 28.0441V28.3126C15.4316 28.5952 15.6608 28.8243 15.9434 28.8243ZM18.7697 22.6578C19.3376 22.6578 19.7996 23.1198 19.7996 23.6877C19.7996 24.2556 19.3376 24.7176 18.7697 24.7176C18.2019 24.7176 17.7399 24.2556 17.7399 23.6877C17.7399 23.1198 18.2019 22.6578 18.7697 22.6578ZM18.7812 25.7411H18.7582C17.5705 25.7411 16.5899 26.6448 16.4679 27.8007H21.0715C20.9495 26.6448 19.9689 25.7411 18.7812 25.7411Z" fill="#3292CD"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.166 23.6854H29.8186C30.1012 23.6854 30.3304 23.4563 30.3304 23.1736V22.9052C30.3304 21.6103 29.5861 20.4866 28.5035 19.9373C28.8399 19.5715 29.0457 19.0838 29.0457 18.5488C29.0457 17.4165 28.1245 16.4954 26.9923 16.4954C25.8601 16.4954 24.939 17.4165 24.939 18.5488C24.939 19.0837 25.1448 19.5714 25.4812 19.9373C24.3985 20.4866 23.6543 21.6103 23.6543 22.9052V23.1736C23.6542 23.4563 23.8834 23.6854 24.166 23.6854ZM26.9923 17.519C27.5602 17.519 28.0221 17.981 28.0221 18.5489C28.0221 19.1168 27.5602 19.5787 26.9923 19.5787C26.4245 19.5787 25.9625 19.1168 25.9625 18.5489C25.9625 17.981 26.4245 17.519 26.9923 17.519ZM27.0038 20.6022H26.9808C25.7931 20.6022 24.8125 21.506 24.6906 22.6619H29.2941C29.1721 21.506 28.1915 20.6022 27.0038 20.6022Z" fill="#3292CD"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3888 20.0884H38.0414C38.324 20.0884 38.5531 19.8593 38.5531 19.5767V19.3082C38.5531 18.0133 37.8089 16.8897 36.7262 16.3404C37.0626 15.9745 37.2685 15.4869 37.2685 14.9519C37.2684 13.8196 36.3473 12.8984 35.215 12.8984C34.0828 12.8984 33.1616 13.8196 33.1616 14.9519C33.1616 15.4868 33.3675 15.9745 33.7039 16.3404C32.6212 16.8897 31.877 18.0133 31.877 19.3082V19.5767C31.877 19.8593 32.1061 20.0884 32.3888 20.0884ZM35.215 13.922C35.7829 13.922 36.2448 14.384 36.2448 14.9519C36.2448 15.5197 35.7829 15.9817 35.215 15.9817C34.6472 15.9817 34.1852 15.5197 34.1852 14.9519C34.1852 14.384 34.6472 13.922 35.215 13.922ZM35.2266 17.0052H35.2036C34.0158 17.0052 33.0352 17.9089 32.9133 19.0649H37.5168C37.3949 17.9089 36.4143 17.0052 35.2266 17.0052Z" fill="#3292CD"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.582 35.5088H30.3303V25.2293C30.3303 24.9467 30.1011 24.7175 29.8185 24.7175H24.1659C23.8832 24.7175 23.6541 24.9467 23.6541 25.2293V35.5088H14.4024C14.1197 35.5088 13.8906 35.7379 13.8906 36.0206V38.5899C13.8906 38.8726 14.1197 39.1017 14.4024 39.1017H39.582C39.8646 39.1017 40.0938 38.8726 40.0938 38.5899V36.0206C40.0938 35.7379 39.8646 35.5088 39.582 35.5088ZM24.6777 25.7411H29.3067V35.5088H24.6777V25.7411ZM14.9142 38.0781H39.0702V36.5323H14.9142V38.0781Z" fill="#3292CD"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                            <div class="flex p-4 bg-white rounded drop-shadow-sm">
+                                <div class="flex flex-col gap-3 grow">
+                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Winning Target</h3>
+                                    <h4 class="mb-0 text-xl font-medium text-gray-900">140.8K</h4>
+                                    <span class="flex px-2 py-1 bg-green-100 rounded-xl w-11">
+                                        <span class="text-green-600 text-2xs font-medium flex items-center gap-0.5">
+                                            <span>40%</span>
+                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.50817 1L1 5.50817" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M1.45068 1H5.50804V5.05735" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>                                        
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="flex items-start shrink-0">
+                                    <svg width="52" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.127521" cx="26.4961" cy="26" r="26" fill="#469DD2"/>
+                                        <path d="M25.4473 25.8502L29.8763 21.4211" stroke="#3292CD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M29.877 21.4211L30.4807 17.4353L33.9329 14.0426L34.4665 16.8316L37.2555 17.3652L33.8627 20.8174L29.877 21.4211H29.877Z" stroke="#3292CD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M36.1182 23.3566C37.2744 27.7394 35.4481 32.3649 31.6097 34.7757C27.7714 37.1865 22.8116 36.823 19.3657 33.8784C15.9198 30.9338 14.7874 26.0914 16.5701 21.924C18.3529 17.7567 22.6371 15.2315 27.1465 15.6901" stroke="#3292CD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M31.5122 24.6576C32.0854 26.9687 31.1293 29.3889 29.1313 30.6842C27.1333 31.9795 24.5336 31.8646 22.6578 30.3981C20.7819 28.9316 20.0429 26.4365 20.8178 24.185C21.5926 21.9335 23.7105 20.4215 26.0916 20.4199" stroke="#3292CD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M20.6644 34.7687L19.8672 37.9573" stroke="#3292CD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M31.8262 34.7687L32.6234 37.9573" stroke="#3292CD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                            <div class="flex p-4 bg-white rounded drop-shadow-sm">
+                                <div class="flex flex-col gap-3 grow">
+                                    <h3 class="mb-0 text-xs font-medium text-gray-600">Marked Votes</h3>
+                                    <h4 class="mb-0 text-xl font-medium text-gray-900">89.8K</h4>
+                                    <span class="flex px-2 py-1 bg-violet-100 rounded-xl w-11">
+                                        <span class="text-violet-600 text-2xs font-medium flex items-center gap-0.5">
+                                            <span>30%</span>
+                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.50817 1L1 5.50817" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M1.45068 1H5.50804V5.05735" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>                                        
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="flex items-start shrink-0">
+                                    <svg width="52" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.127521" cx="26.9922" cy="26" r="26" fill="#469DD2"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2072 16.8756H13.387C13.0816 16.8756 12.834 16.628 12.834 16.3226C12.834 16.0172 13.0816 15.7696 13.387 15.7696H15.6542V13.5576C15.6542 13.2522 15.9019 13.0046 16.2072 13.0046C16.5126 13.0046 16.7602 13.2522 16.7602 13.5576V16.3226C16.7602 16.628 16.5126 16.8756 16.2072 16.8756ZM40.5942 16.8756H37.7739C37.4686 16.8756 37.221 16.628 37.221 16.3226V13.5576C37.221 13.2522 37.4686 13.0046 37.7739 13.0046C38.0793 13.0046 38.3269 13.2522 38.3269 13.5576V15.7696H40.5942C40.8996 15.7696 41.1472 16.0172 41.1472 16.3226C41.1472 16.628 40.8996 16.8756 40.5942 16.8756ZM16.2072 35.1243H13.387C13.0816 35.1243 12.834 35.3719 12.834 35.6773C12.834 35.9827 13.0816 36.2303 13.387 36.2303H15.6542V38.4423C15.6542 38.7477 15.9019 38.9953 16.2072 38.9953C16.5126 38.9953 16.7602 38.7477 16.7602 38.4423V35.6773C16.7602 35.3719 16.5126 35.1243 16.2072 35.1243ZM37.7739 35.1243H40.5942C40.8996 35.1243 41.1472 35.3719 41.1472 35.6773C41.1472 35.9827 40.8996 36.2303 40.5942 36.2303H38.3269V38.4423C38.3269 38.7477 38.0793 38.9953 37.7739 38.9953C37.4686 38.9953 37.221 38.7477 37.221 38.4423V35.6773C37.221 35.3719 37.4686 35.1243 37.7739 35.1243ZM38.0501 26.553H36.9289C36.6509 31.6022 32.5928 35.6603 27.5436 35.9382V37.0627C27.5436 37.3682 27.296 37.6157 26.9906 37.6157C26.6852 37.6157 26.4376 37.3682 26.4376 37.0627V35.9382C21.3884 35.6603 17.3303 31.6022 17.0523 26.553H15.9286C15.6232 26.553 15.3756 26.3054 15.3756 26C15.3756 25.6945 15.6232 25.447 15.9286 25.447H17.0523C17.3303 20.3978 21.3884 16.3396 26.4376 16.0617V14.9401C26.4376 14.6346 26.6852 14.3871 26.9906 14.3871C27.296 14.3871 27.5436 14.6346 27.5436 14.9401V16.0617C32.5928 16.3396 36.6509 20.3978 36.9289 25.447H38.0501C38.3554 25.447 38.603 25.6945 38.603 26C38.603 26.3054 38.3554 26.553 38.0501 26.553ZM18.1427 26C18.1427 30.8787 22.1118 34.8478 26.9906 34.8478C31.8639 34.8478 35.8381 30.8845 35.8381 26C35.8381 21.1084 31.8568 17.1521 26.9906 17.1521C22.1118 17.1521 18.1427 21.1212 18.1427 26ZM29.7556 23.5115C29.7556 24.1603 29.5304 24.7572 29.1548 25.2294C30.1317 25.4586 30.8615 26.3366 30.8615 27.3824V29.0414C30.8615 29.3468 30.6139 29.5944 30.3085 29.5944H23.6726C23.3672 29.5944 23.1196 29.3468 23.1196 29.0414V27.3824C23.1196 26.3366 23.8495 25.4586 24.8264 25.2294C24.4508 24.7572 24.2256 24.1603 24.2256 23.5115C24.2256 21.9869 25.466 20.7465 26.9906 20.7465C28.5152 20.7465 29.7556 21.9869 29.7556 23.5115ZM28.6496 23.5115C28.6496 22.5967 27.9054 21.8525 26.9906 21.8525C26.0758 21.8525 25.3316 22.5967 25.3316 23.5115C25.3316 24.4263 26.0758 25.1705 26.9906 25.1705C27.9054 25.1705 28.6496 24.4263 28.6496 23.5115ZM24.2256 28.4884V27.3824C24.2256 26.7726 24.7218 26.2765 25.3316 26.2765H28.6496C29.2594 26.2765 29.7556 26.7726 29.7556 27.3824V28.4884H24.2256Z" fill="#3292CD"/>
+                                        <path d="M15.6542 15.7696V15.9696H15.8542V15.7696H15.6542ZM38.3269 15.7696H38.1269V15.9696H38.3269V15.7696ZM15.6542 36.2303H15.8542V36.0303H15.6542V36.2303ZM38.3269 36.2303V36.0303H38.1269V36.2303H38.3269ZM36.9289 26.553V26.353H36.7396L36.7292 26.542L36.9289 26.553ZM27.5436 35.9382L27.5326 35.7385L27.3436 35.7489V35.9382H27.5436ZM26.4376 35.9382H26.6376V35.7489L26.4486 35.7385L26.4376 35.9382ZM17.0523 26.553L17.252 26.542L17.2416 26.353H17.0523V26.553ZM17.0523 25.447V25.647H17.2416L17.252 25.458L17.0523 25.447ZM26.4376 16.0617L26.4486 16.2614L26.6376 16.251V16.0617H26.4376ZM27.5436 16.0617H27.3436V16.251L27.5326 16.2614L27.5436 16.0617ZM36.9289 25.447L36.7292 25.458L36.7396 25.647H36.9289V25.447ZM29.1548 25.2294L28.9983 25.1049L28.8017 25.352L29.1091 25.4241L29.1548 25.2294ZM24.8264 25.2294L24.8721 25.4241L25.1795 25.352L24.9829 25.1049L24.8264 25.2294ZM24.2256 28.4884H24.0256V28.6884H24.2256V28.4884ZM29.7556 28.4884V28.6884H29.9556V28.4884H29.7556ZM13.387 17.0756H16.2072V16.6756H13.387V17.0756ZM12.634 16.3226C12.634 16.7385 12.9711 17.0756 13.387 17.0756V16.6756C13.192 16.6756 13.034 16.5176 13.034 16.3226H12.634ZM13.387 15.5696C12.9711 15.5696 12.634 15.9067 12.634 16.3226H13.034C13.034 16.1276 13.192 15.9696 13.387 15.9696V15.5696ZM15.6542 15.5696H13.387V15.9696H15.6542V15.5696ZM15.4542 13.5576V15.7696H15.8542V13.5576H15.4542ZM16.2072 12.8046C15.7914 12.8046 15.4542 13.1417 15.4542 13.5576H15.8542C15.8542 13.3627 16.0123 13.2046 16.2072 13.2046V12.8046ZM16.9602 13.5576C16.9602 13.1417 16.623 12.8046 16.2072 12.8046V13.2046C16.4022 13.2046 16.5602 13.3627 16.5602 13.5576H16.9602ZM16.9602 16.3226V13.5576H16.5602V16.3226H16.9602ZM16.2072 17.0756C16.623 17.0756 16.9602 16.7385 16.9602 16.3226H16.5602C16.5602 16.5175 16.4022 16.6756 16.2072 16.6756V17.0756ZM37.7739 17.0756H40.5942V16.6756H37.7739V17.0756ZM37.021 16.3226C37.021 16.7385 37.3581 17.0756 37.7739 17.0756V16.6756C37.579 16.6756 37.421 16.5175 37.421 16.3226H37.021ZM37.021 13.5576V16.3226H37.421V13.5576H37.021ZM37.7739 12.8046C37.3581 12.8046 37.021 13.1417 37.021 13.5576H37.421C37.421 13.3627 37.579 13.2046 37.7739 13.2046V12.8046ZM38.5269 13.5576C38.5269 13.1417 38.1898 12.8046 37.7739 12.8046V13.2046C37.9689 13.2046 38.1269 13.3627 38.1269 13.5576H38.5269ZM38.5269 15.7696V13.5576H38.1269V15.7696H38.5269ZM40.5942 15.5696H38.3269V15.9696H40.5942V15.5696ZM41.3472 16.3226C41.3472 15.9067 41.01 15.5696 40.5942 15.5696V15.9696C40.7891 15.9696 40.9472 16.1276 40.9472 16.3226H41.3472ZM40.5942 17.0756C41.01 17.0756 41.3472 16.7385 41.3472 16.3226H40.9472C40.9472 16.5175 40.7891 16.6756 40.5942 16.6756V17.0756ZM13.387 35.3243H16.2072V34.9243H13.387V35.3243ZM13.034 35.6773C13.034 35.4824 13.192 35.3243 13.387 35.3243V34.9243C12.9711 34.9243 12.634 35.2615 12.634 35.6773H13.034ZM13.387 36.0303C13.192 36.0303 13.034 35.8723 13.034 35.6773H12.634C12.634 36.0932 12.9711 36.4303 13.387 36.4303V36.0303ZM15.6542 36.0303H13.387V36.4303H15.6542V36.0303ZM15.8542 38.4423V36.2303H15.4542V38.4423H15.8542ZM16.2072 38.7953C16.0123 38.7953 15.8542 38.6372 15.8542 38.4423H15.4542C15.4542 38.8582 15.7914 39.1953 16.2072 39.1953V38.7953ZM16.5602 38.4423C16.5602 38.6372 16.4022 38.7953 16.2072 38.7953V39.1953C16.623 39.1953 16.9602 38.8582 16.9602 38.4423H16.5602ZM16.5602 35.6773V38.4423H16.9602V35.6773H16.5602ZM16.2072 35.3243C16.4022 35.3243 16.5602 35.4824 16.5602 35.6773H16.9602C16.9602 35.2614 16.623 34.9243 16.2072 34.9243V35.3243ZM40.5942 34.9243H37.7739V35.3243H40.5942V34.9243ZM41.3472 35.6773C41.3472 35.2614 41.01 34.9243 40.5942 34.9243V35.3243C40.7891 35.3243 40.9472 35.4824 40.9472 35.6773H41.3472ZM40.5942 36.4303C41.01 36.4303 41.3472 36.0932 41.3472 35.6773H40.9472C40.9472 35.8723 40.7891 36.0303 40.5942 36.0303V36.4303ZM38.3269 36.4303H40.5942V36.0303H38.3269V36.4303ZM38.5269 38.4423V36.2303H38.1269V38.4423H38.5269ZM37.7739 39.1953C38.1898 39.1953 38.5269 38.8582 38.5269 38.4423H38.1269C38.1269 38.6372 37.9689 38.7953 37.7739 38.7953V39.1953ZM37.021 38.4423C37.021 38.8582 37.3581 39.1953 37.7739 39.1953V38.7953C37.579 38.7953 37.421 38.6372 37.421 38.4423H37.021ZM37.021 35.6773V38.4423H37.421V35.6773H37.021ZM37.7739 34.9243C37.3581 34.9243 37.021 35.2614 37.021 35.6773H37.421C37.421 35.4824 37.579 35.3243 37.7739 35.3243V34.9243ZM36.9289 26.753H38.0501V26.353H36.9289V26.753ZM27.5546 36.1379C32.7056 35.8544 36.845 31.715 37.1286 26.5639L36.7292 26.542C36.4568 31.4894 32.48 35.4662 27.5326 35.7385L27.5546 36.1379ZM27.7436 37.0627V35.9382H27.3436V37.0627H27.7436ZM26.9906 37.8157C27.4064 37.8157 27.7436 37.4786 27.7436 37.0627H27.3436C27.3436 37.2577 27.1855 37.4157 26.9906 37.4157V37.8157ZM26.2376 37.0627C26.2376 37.4786 26.5747 37.8157 26.9906 37.8157V37.4157C26.7956 37.4157 26.6376 37.2577 26.6376 37.0627H26.2376ZM26.2376 35.9382V37.0627H26.6376V35.9382H26.2376ZM16.8526 26.5639C17.1362 31.715 21.2756 35.8544 26.4266 36.1379L26.4486 35.7385C21.5012 35.4662 17.5243 31.4894 17.252 26.542L16.8526 26.5639ZM15.9286 26.753H17.0523V26.353H15.9286V26.753ZM15.1756 26C15.1756 26.4159 15.5128 26.753 15.9286 26.753V26.353C15.7337 26.353 15.5756 26.1949 15.5756 26H15.1756ZM15.9286 25.247C15.5128 25.247 15.1756 25.5841 15.1756 26H15.5756C15.5756 25.805 15.7337 25.647 15.9286 25.647V25.247ZM17.0523 25.247H15.9286V25.647H17.0523V25.247ZM26.4266 15.862C21.2756 16.1455 17.1362 20.285 16.8526 25.436L17.252 25.458C17.5243 20.5106 21.5012 16.5337 26.4486 16.2614L26.4266 15.862ZM26.2376 14.9401V16.0617H26.6376V14.9401H26.2376ZM26.9906 14.1871C26.5747 14.1871 26.2376 14.5242 26.2376 14.9401H26.6376C26.6376 14.7451 26.7956 14.5871 26.9906 14.5871V14.1871ZM27.7436 14.9401C27.7436 14.5242 27.4064 14.1871 26.9906 14.1871V14.5871C27.1855 14.5871 27.3436 14.7451 27.3436 14.9401H27.7436ZM27.7436 16.0617V14.9401H27.3436V16.0617H27.7436ZM37.1286 25.436C36.845 20.285 32.7056 16.1455 27.5546 15.862L27.5326 16.2614C32.48 16.5337 36.4568 20.5106 36.7292 25.458L37.1286 25.436ZM38.0501 25.247H36.9289V25.647H38.0501V25.247ZM38.803 26C38.803 25.5841 38.4659 25.247 38.0501 25.247V25.647C38.245 25.647 38.403 25.805 38.403 26H38.803ZM38.0501 26.753C38.4659 26.753 38.803 26.4159 38.803 26H38.403C38.403 26.1949 38.245 26.353 38.0501 26.353V26.753ZM26.9906 34.6478C22.2223 34.6478 18.3427 30.7682 18.3427 26H17.9427C17.9427 30.9891 22.0014 35.0478 26.9906 35.0478V34.6478ZM35.6381 26C35.6381 30.7739 31.7536 34.6478 26.9906 34.6478V35.0478C31.9742 35.0478 36.0381 30.9952 36.0381 26H35.6381ZM26.9906 17.3521C31.7467 17.3521 35.6381 21.2192 35.6381 26H36.0381C36.0381 20.9976 31.9669 16.9521 26.9906 16.9521V17.3521ZM18.3427 26C18.3427 21.2317 22.2223 17.3521 26.9906 17.3521V16.9521C22.0014 16.9521 17.9427 21.0108 17.9427 26H18.3427ZM29.3113 25.3539C29.7138 24.8478 29.9556 24.2074 29.9556 23.5115H29.5556C29.5556 24.1132 29.3469 24.6665 28.9983 25.1049L29.3113 25.3539ZM31.0615 27.3824C31.0615 26.2414 30.2655 25.2845 29.2005 25.0347L29.1091 25.4241C29.9979 25.6326 30.6615 26.4318 30.6615 27.3824H31.0615ZM31.0615 29.0414V27.3824H30.6615V29.0414H31.0615ZM30.3085 29.7944C30.7244 29.7944 31.0615 29.4573 31.0615 29.0414H30.6615C30.6615 29.2364 30.5035 29.3944 30.3085 29.3944V29.7944ZM23.6726 29.7944H30.3085V29.3944H23.6726V29.7944ZM22.9196 29.0414C22.9196 29.4573 23.2568 29.7944 23.6726 29.7944V29.3944C23.4777 29.3944 23.3196 29.2364 23.3196 29.0414H22.9196ZM22.9196 27.3824V29.0414H23.3196V27.3824H22.9196ZM24.7807 25.0347C23.7157 25.2845 22.9196 26.2414 22.9196 27.3824H23.3196C23.3196 26.4318 23.9833 25.6326 24.8721 25.4241L24.7807 25.0347ZM24.0256 23.5115C24.0256 24.2074 24.2673 24.8478 24.6699 25.3539L24.9829 25.1049C24.6343 24.6665 24.4256 24.1132 24.4256 23.5115H24.0256ZM26.9906 20.5465C25.3555 20.5465 24.0256 21.8764 24.0256 23.5115H24.4256C24.4256 22.0974 25.5764 20.9465 26.9906 20.9465V20.5465ZM29.9556 23.5115C29.9556 21.8764 28.6257 20.5465 26.9906 20.5465V20.9465C28.4047 20.9465 29.5556 22.0974 29.5556 23.5115H29.9556ZM26.9906 22.0525C27.7949 22.0525 28.4496 22.7072 28.4496 23.5115H28.8496C28.8496 22.4863 28.0158 21.6525 26.9906 21.6525V22.0525ZM25.5316 23.5115C25.5316 22.7072 26.1863 22.0525 26.9906 22.0525V21.6525C25.9654 21.6525 25.1316 22.4863 25.1316 23.5115H25.5316ZM26.9906 24.9705C26.1863 24.9705 25.5316 24.3158 25.5316 23.5115H25.1316C25.1316 24.5367 25.9654 25.3705 26.9906 25.3705V24.9705ZM28.4496 23.5115C28.4496 24.3158 27.7949 24.9705 26.9906 24.9705V25.3705C28.0158 25.3705 28.8496 24.5367 28.8496 23.5115H28.4496ZM24.0256 27.3824V28.4884H24.4256V27.3824H24.0256ZM25.3316 26.0765C24.6113 26.0765 24.0256 26.6621 24.0256 27.3824H24.4256C24.4256 26.8831 24.8322 26.4765 25.3316 26.4765V26.0765ZM28.6496 26.0765H25.3316V26.4765H28.6496V26.0765ZM29.9556 27.3824C29.9556 26.6621 29.3699 26.0765 28.6496 26.0765V26.4765C29.149 26.4765 29.5556 26.8831 29.5556 27.3824H29.9556ZM29.9556 28.4884V27.3824H29.5556V28.4884H29.9556ZM24.2256 28.6884H29.7556V28.2884H24.2256V28.6884Z" fill="#3292CD"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded drop-shadow-sm">
+                            <div class="flex flex-col items-center">
+                                <h2 class="w-full px-4 py-3 text-sm font-semibold text-gray-600 border-b border-gray-300">Votes</h2>
+                                <div class="px-4 py-3">
+                                    chart
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="h-32 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-64">
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+                        <div class="bg-white rounded drop-shadow-sm">
+                            <div class="flex flex-col items-center">
+                                <h2 class="w-full px-4 py-3 text-sm font-semibold text-gray-600 border-b border-gray-300">Votes with Phone Numbers</h2>
+                                <div class="flex flex-col w-full gap-3 px-4 py-3 divide-y divide-gray-200">
+                                    <div class="text-center">
+                                        chart
+                                    </div>
+                                    <div class="flex justify-between w-full gap-3 pt-3">
+                                        <div>
+                                            <p class="mb-2 text-xs font-normal text-gray-600">Total</p>
+                                            <h3 class="text-base font-medium text-gray-900">393,901</h3>
+                                            <p class="text-xs font-normal text-gray-500">(234,987)</p>
+                                        </div>
+                                        <div>
+                                            <p class="mb-2 text-xs font-normal text-gray-600">Male</p>
+                                            <h3 class="text-base font-medium text-gray-900">79,290</h3>
+                                            <p class="text-xs font-normal text-gray-500">(234,987)</p>
+                                        </div>
+                                        <div>
+                                            <p class="mb-2 text-xs font-normal text-gray-600">Female</p>
+                                            <h3 class="text-base font-medium text-gray-900">37,045</h3>
+                                            <p class="text-xs font-normal text-gray-500">(234,987)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 gap-4 md:col-span-2 md:grid-cols-2">
+                            <div class="bg-white rounded drop-shadow-sm">
+                                <div class="flex flex-col items-center">
+                                    <h2 class="w-full px-4 py-3 text-sm font-semibold text-gray-600 border-b border-gray-300">Age Bracket</h2>
+                                    <div class="px-4 py-3">
+                                        chart
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded drop-shadow-sm">
+                                <div class="flex flex-col items-center">
+                                    <h2 class="w-full px-4 py-3 text-sm font-semibold text-gray-600 border-b border-gray-300">Family Size Breakup</h2>
+                                    <div class="px-4 py-3">
+                                        chart
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded md:col-span-2 drop-shadow-sm">
+                                <div class="flex flex-col items-center">
+                                    <h2 class="w-full px-4 py-3 text-sm font-semibold text-gray-600 border-b border-gray-300">Families with Potential Votes</h2>
+                                    <div class="grid w-full px-4 py-3 divide-y divide-gray-300 md:divide-y-0 md:divide-x md:grid-cols-3">
+                                        <div class="pb-3 md:pr-10 md:pb-0">
+                                            <p class="text-xs font-normal text-gray-600">1 Potential Vote</p>
+                                            <h3 class="mb-1 text-base font-medium text-gray-900">8,469</h3>
+                                            <div class="mb-2 w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                                                <div class="bg-blue-400 h-2.5 rounded-full" style="width: 45%"></div>
+                                            </div>
+                                            <p class="flex items-center gap-1 text-xs font-normal text-gray-500">
+                                                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.49023 0.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M3.74023 3.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M5.99023 1.56054V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M8.24023 4.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M10.4902 0.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                </svg>                                                    
+                                                Family members 11,230
+                                            </p>
+                                        </div>
+                                        <div class="py-3 md:px-10 md:py-0">
+                                            <p class="text-xs font-normal text-gray-600">2 Potential Votes</p>
+                                            <h3 class="mb-1 text-base font-medium text-gray-900">1,987</h3>
+                                            <div class="mb-2 w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                                                <div class="bg-amber-400 h-2.5 rounded-full" style="width: 65%"></div>
+                                            </div>
+                                            <p class="flex items-center gap-1 text-xs font-normal text-gray-500">
+                                                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.49023 0.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M3.74023 3.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M5.99023 1.56054V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M8.24023 4.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M10.4902 0.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                </svg>                                                    
+                                                Family members 11,230
+                                            </p>
+                                        </div>
+                                        <div class="pt-3 md:pl-10 md:pt-0">
+                                            <p class="text-xs font-normal text-gray-600">3+ Potential Votes</p>
+                                            <h3 class="mb-1 text-base font-medium text-gray-900">1,601</h3>
+                                            <div class="mb-2 w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                                                <div class="bg-red-400 h-2.5 rounded-full" style="width: 65%"></div>
+                                            </div>
+                                            <p class="flex items-center gap-1 text-xs font-normal text-gray-500">
+                                                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.49023 0.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M3.74023 3.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M5.99023 1.56054V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M8.24023 4.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                    <path d="M10.4902 0.75V8.75" stroke="#979797" stroke-linecap="round"/>
+                                                </svg>                                                    
+                                                Family members 12,602
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="h-32 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-64">
-                    </div>
-                </div>
-                <div class="mb-4 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 h-96"></div>
-                <div class="grid grid-cols-2 gap-4 mb-4">
-                    <div class="h-48 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-72">
-                    </div>
-                    <div class="h-48 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-72">
-                    </div>
-                    <div class="h-48 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-72">
-                    </div>
-                    <div class="h-48 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-72">
-                    </div>
-                </div>
-                <div class="mb-4 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 h-96"></div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="h-48 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-72">
-                    </div>
-                    <div class="h-48 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-72">
-                    </div>
-                    <div class="h-48 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-72">
-                    </div>
-                    <div class="h-48 border-2 border-gray-300 border-dashed rounded-lg dark:border-gray-600 md:h-72">
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                        <div class="bg-white rounded drop-shadow-sm">
+                            <div class="flex flex-col items-center">
+                                <h2 class="w-full px-4 py-3 text-sm font-semibold text-gray-600 border-b border-gray-300">Votes Added Since Last Election</h2>
+                                <div class="px-4 py-3">
+                                    chart
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded drop-shadow-sm">
+                            <div class="flex flex-col items-center">
+                                <h2 class="w-full px-4 py-3 text-sm font-semibold text-gray-600 border-b border-gray-300">Votes Removed Since Last Eelection</h2>
+                                <div class="px-4 py-3">
+                                    chart
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
